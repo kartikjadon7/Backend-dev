@@ -1,0 +1,2 @@
+Create a Node.js program that reads a text file, counts the number of words, and writes the
+count to a new file.
