@@ -1,0 +1,21 @@
+
+Time: 19/1/2026, 10:28:00 pm
+CPU: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx  
+Total Memory: 5.88 GB
+Free Memory: 0.79 GB
+Platform: win32
+-------------------------
+
+Time: 19/1/2026, 10:28:05 pm
+CPU: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx  
+Total Memory: 5.88 GB
+Free Memory: 0.79 GB
+Platform: win32
+-------------------------
+
+Time: 19/1/2026, 10:28:10 pm
+CPU: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx  
+Total Memory: 5.88 GB
+Free Memory: 0.79 GB
+Platform: win32
+-------------------------
