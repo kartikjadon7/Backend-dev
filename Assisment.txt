@@ -1,0 +1,67 @@
+Assessment Questions – File System Operations 
+
+1. Difference between synchronous and asynchronous file operations
+
+ANS- Synchronous file operations block the execution of the program until the operation is completed.
+This means the next line of code will not run until the file task finishes. Asynchronous file operations
+do not block execution. They allow the program to continue running while the file operation
+completes in the background using callbacks, promises, or async/await. Asynchronous operations
+improve performance and responsiveness, especially in server-side applications.
+
+
+
+2. When should you use file streams instead of reading the entire file?
+
+
+ANS- File streams should be used when dealing with large files or continuous data. Reading an entire file
+loads it fully into memory, which can cause high memory usage or crashes. Streams read data in
+small chunks, making them memory efficient and faster for large files like videos, logs, or backups.
+
+
+
+3. Purpose of the ‘utf8’ encoding parameter in file operations
+
+
+ANS- The utf8 encoding parameter tells Node.js to interpret file data as human-readable text. Without
+specifying utf8, Node.js returns the data as a Buffer (binary format). Using utf8 ensures correct
+representation of characters, especially for text files.
+
+
+
+4. Common error codes in file system operations and their meaning
+
+
+ANS- ENOENT means the file or directory does not exist. EACCES indicates permission is denied.
+EEXIST occurs when trying to create a file that already exists. ENOTDIR means the expected
+directory is actually a file. EISDIR means the path refers to a directory instead of a file. EPERM
+indicates an operation is not permitted by the system.
+
+
+5. How to safely delete a directory with all its contents
+
+
+ANS- To safely delete a directory and everything inside it, recursive deletion is required. The recursive
+option ensures all nested files and subdirectories are removed. The force option avoids errors if the
+directory does not exist. This method prevents partial deletion and runtime crashes.
+
+
+6. Concept of piping in streams with an example
+
+ANS- Piping is a mechanism that connects a readable stream directly to a writable stream. It
+automatically transfers data chunk by chunk without manual handling. Piping is commonly used for
+copying files, streaming videos, or compressing data efficiently.
+
+
+7. Importance of handling errors in file operations
+
+ANS- Error handling is essential to prevent application crashes and unexpected behavior. File operations
+can fail due to missing files, permission issues, or disk errors. Proper error handling improves
+reliability, security, and debugging of applications.
+
+
+8. Difference between writeFile and appendFile methods
+
+
+ANS- The writeFile method replaces the entire content of a file if it already exists. The appendFile method
+adds new data to the end of the file without removing existing content. writeFile is used for fresh
+data, while appendFile is commonly used for logs.
