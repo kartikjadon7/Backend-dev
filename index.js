@@ -57,6 +57,35 @@ app.post("/students/register",(req,res)=>{
 
 });
 
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
+
+app.post('/students', (req, res) => {
+    const newStudent = req.body;
+
+    fs.readFile('student.json', 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading student data');
+        }
+
+        let students = [];
+
+        
+        if (data) {
+            students = JSON.parse(data);
+        }
+
+        students.push(newStudent);
+
+        fs.writeFile('student.json', JSON.stringify(students, null, 2), (err) => {
+            if (err) {
+                return res.status(500).send('Error saving student data');
+            }
+            res.status(201).send('Student added successfully');
+        });
+    });
 });
