@@ -30,7 +30,7 @@ const authMiddleware = (req, res, next) => {
   }
 
   console.log("Token verified");
-  next();
+  next();1
 };
 
 // logger middleware (write to file)
